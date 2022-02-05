@@ -1,0 +1,174 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('src/assets/bg_granite_texture.jpg');
+  overflow-x: hidden;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+svg {
+  vertical-align: middle;
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+.primary-navigation {
+  gap: clamp(2rem, 5vw, 6.5rem);
+  padding: 0;
+  margin: 0;
+  background: hsl(0 0% 0% / 0.55);
+}
+
+@media (min-width: 1020px) {
+  .primary-navigation {
+    padding-inline: clamp(3rem, 7vw, 10rem);
+    margin-block: 2rem;
+  }
+
+  header::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1px;
+    margin-right: -3rem;
+    width: 100%;
+    background: hsl(0 0% 100% / 0.25);
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+  }
+}
+
+.nav-list-item {
+  height: 100%;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-grow: 1;
+    flex-basis: 100%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.nav-list-item a {
+  display: block;
+  padding: 15px 0;
+  border-left: 5px solid transparent;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+  }
+}
+
+.nav-list-item a:hover {
+  color: #fafafa;
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+  @media (max-width: 768px) {
+    border-left: 0;
+    border-bottom: 3px solid #a855f7;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.nav-list-item .active {
+  color: #fafafa;
+  background-color: #222222;
+  border-left: 5px solid #a855f7;
+  @media (max-width: 768px) {
+    border-left: 0;
+    border-bottom: 3px solid #a855f7;
+  }
+}
