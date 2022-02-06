@@ -9,7 +9,7 @@ Tools: NodeJS, Express, Heroku.
 
 The topics explored on the server-side were: **REST APIs**, **HTTP requests**, and the implementation of the authorization protocol **OAuth**, to allow users to log in with their Spotify account.
 
-The server in NodeJS was created using the Express framework, instead of the native `http` module that ships with NodeJS. Using Express made some parts easier to implement (such as routes) and another good part is that it also has a healthy community with plenty resources to help building out API's. The POST request was set up using the **axios** library because it provides an easier API than Node's native module. 
+The server in NodeJS was created using the Express framework, instead of the native `http` module that ships with NodeJS. Using Express made some parts easier to implement (such as routes) and another good part is that it also has a healthy community with plenty resources to help building out API's. The `POST` request was set up using the **axios** library because it provides an easier API than Node's native module. 
 
 <img src="https://developer.spotify.com/assets/AuthG_ClientCredentials.png" width="500" height="432">
 
