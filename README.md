@@ -3,6 +3,12 @@
 This web app displays some of your Spotify stats such as top artist/tracks, the latest played tracks and audio features (acoustincness, danceability, liveness etc) by fetching data from the Spotify Web API.
 As a junior, throughout this project I gained a better understanding about building and deploying a full-stack web app.
 
+## Code Style
+I used the automatic code-formatter [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/docs/user-guide/getting-started), a static code analysis tool for identifying problematic patterns found in ECMAScript code. These tools allow the developer to stop thinking about things like "*what is the spacing or is there a need for a comma or semicolon in a particular place*", which can help with writing better code faster by taking care of some things automatically. 
+Prettier provides a way to configure the formatting but I used the default config because I don't have strong opinions on this matter and I prefer letting the automatization take care of it.
+
+ESLint is a bit more higher level/opinionated, allowing you to have opinion about enforcing a code, whereas Prettier is more syntactical. There can be an overlap between the two tools but you can set them up so they can work together in a good way.
+
 ## Back-end
 
 Tools: NodeJS, Express, Heroku.
@@ -58,12 +64,6 @@ function App() {
 ```
 
 The styling was done with the help of Windi CSS, an utility-first CSS framework, similar to Tailwind. One of the advantages of a CSS framework with predefined utility classes is that you don't have to waste time and energy to come up with names for the classes. On the other hand, I had to rely on vanilla CSS to add styling in some places.
-
-## Code Style
-I also used the automatic code-formatter [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/docs/user-guide/getting-started), a static code analysis tool for identifying problematic patterns found in ECMAScript code. These tools allow the developer to stop thinking about things like "*what is the spacing or is there a need for a comma or semicolon in a particular place*", which can help with writing better code faster by taking care of some things automatically. 
-Prettier provides a way to configure the formatting but I used the default config because I don't have strong opinions on this matter and I prefer letting the automatization take care of it.
-ESLint is a bit more higher level/opinionated, allowing you to have opinion about enforcing a code, whereas Prettier is more syntactical. There can be an overlap between the two tools but you can set them up so they can work together in a good way.
-
 
 
 landing page profile photo source: <https://unsplash.com/photos/wKAOlN4A644>
