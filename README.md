@@ -7,7 +7,7 @@ As a junior, throughout this project I gained a better understanding about build
 I used the automatic code-formatter [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/docs/user-guide/getting-started), a static code analysis tool for identifying problematic patterns found in ECMAScript code. These tools allow the developer to stop thinking about things like "*what is the spacing or is there a need for a comma or semicolon in a particular place*", which can help with writing better code faster by taking care of some things automatically. 
 Prettier provides a way to configure the formatting but I used the default config because I don't have strong opinions on this matter and I prefer letting the automatization take care of it.
 
-ESLint is a bit more higher level/opinionated, allowing you to have opinion about enforcing a code, whereas Prettier is more syntactical. There can be an overlap between the two tools but you can set them up so they can work together in a good way.
+ESLint is a bit more higher level/opinionated, allowing you to have opinion about enforcing a code, whereas Prettier is more syntactical. ESLint is more concerned about what the code does (**is a variable well named? are you using good accesibility practices**) and Prettier about what the code looks. There can be an overlap between the two tools because ESLint can worry (not as good as Prettier) by itself about how the code looks but you can set them up so they can work together in a good way.
 
 ## Back-end
 
