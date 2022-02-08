@@ -1,22 +1,18 @@
 import express from 'express';
 import dotenv from "dotenv";
 import axios from "axios";
-import morgan from 'morgan';
 import randomstring from 'randomstring';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
 dotenv.config();
 const app = express();
 
-app.use(morgan('dev'));
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI; //route where the user is redirected after they authorized the app
-const FRONTEND_URI = process.env.FRONTEND_URI;
+const FE_URI = process.env.FE_URI;
 const PORT = process.env.PORT || 8888;
-const stateKey = 'spotify_auth_state';
 
 //tells express to priority serve any static files from vitejs
 const __dirname = path.resolve(path.dirname(decodeURI(new URL(import.meta.url).pathname)));
@@ -27,7 +23,7 @@ app.use(express.static(path.resolve(__dirname, './client/dist')));
 //1. request authorization code from spotify
 app.get('/login', (req, res) => {
   const state = randomstring.generate(16);
-  res.cookie(stateKey, state); //setting cookie
+  res.cookie('spotify_auth_state', state); //setting cookie
 
   // narrow down the permissions for the client
   //https://developer.spotify.com/documentation/general/guides/authorization/scopes/
@@ -82,7 +78,7 @@ app.get('/callback', function (req, res) {
           expires_in
         }).toString();
         //redirect to react app & pass the query params
-        res.redirect(`${FRONTEND_URI}?${params}`);
+        res.redirect(`${FE_URI}?${params}`);
       } else {
         res.redirect(`/${new URLSearchParams({ error: 'invalid_token' }).toString()}`);
       }
