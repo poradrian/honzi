@@ -12,6 +12,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI; //route where the user is redirected after they authorized the app
 const FE_URI = process.env.FE_URI;
+const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const PORT = process.env.PORT || 8888;
 
 //tells express to priority serve any static files from vitejs
@@ -43,7 +44,7 @@ app.get('/login', (req, res) => {
   }).toString();
 
   //redirects the user to spotify's authorization page
-  res.redirect(`https://accounts.spotify.com/authorize?${params}`);
+  res.redirect(`${AUTH_ENDPOINT}?${params}`);
 });
 
 

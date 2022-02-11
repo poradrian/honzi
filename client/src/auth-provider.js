@@ -28,7 +28,7 @@ function logout() {
 
 /**
  * Checks if the amount of time that has elapsed between the timestamp in localStorage
- * and now is greater than the expiration time of 3600 seconds (1 hour).
+ * and now is > expiration time of 3600 seconds.
  * @returns {boolean} Whether or not the access token in localStorage has expired
  */
 function hasTokenExpired() {
@@ -52,8 +52,8 @@ async function refreshToken() {
       LOCALSTORAGE_VALUES.refreshToken === 'undefined' ||
       (Date.now() - Number(LOCALSTORAGE_VALUES.timestamp) / 1000) < 1000
     ) {
-      console.error('No refresh token available');
       logout();
+      console.error('No refresh token available');
     }
 
     // Use `/refresh_token` endpoint from our Node app
@@ -72,16 +72,9 @@ async function refreshToken() {
 };
 
 //stores tokens in local storage when the users logs for the first time
-//pull the tokens from the local storage when they're available
+//pull the tokens from the local storage when they're ready
 function getAccessToken() {
-  /**
-  * Handles logic for retrieving the Spotify access token from localStorage
-  * or URL query params
-  * @returns {string} A Spotify access token
-  */
-
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
+  const urlParams = new URLSearchParams(window.location.search);
   const queryParams = {
     [LOCALSTORAGE_KEYS.accessToken]: urlParams.get('access_token'),
     [LOCALSTORAGE_KEYS.refreshToken]: urlParams.get('refresh_token'),

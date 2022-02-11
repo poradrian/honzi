@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   getTopTracks,
   getAlbumInfo,
   getAudioFeatures,
-} from '../utils/api-client';
-import { catchErrors } from '../utils/functions';
-import { SectionWrapper, StatsSection } from '../components/Section';
-import RangeButtons from '../components/RangeButtons';
-import TopTracklist from '../components/TopTracklist';
-import Stats from '../components/Stats';
+} from "../utils/api-client";
+import { catchErrors } from "../utils/functions";
+import { SectionWrapper, StatsSection } from "../components/Section";
+import RangeButtons from "../components/RangeButtons";
+import TopTracklist from "../components/TopTracklist";
+import Stats from "../components/Stats";
 
 function TrackScreen() {
   const [topTracks, setTopTracks] = useState(null);
   const [albumInfo, setAlbumInfo] = useState(null);
   const [audioFeatures, setAudioFeatures] = useState(null);
-  const [activeRange, setActiveRange] = useState('short');
+  const [activeRange, setActiveRange] = useState("short");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,17 +34,18 @@ function TrackScreen() {
   }, [activeRange]);
 
   return (
-    <main className='lg:flex lg:justify-center lg:ml-5'>
+    <main className="lg:(flex justify-center ml-5)">
       {topTracks && albumInfo && (
         <SectionWrapper
-          title='Top Tracks'
-          breadcrumb='true'
+          title="Top Tracks"
+          breadcrumb="true"
           rangeButton={
             <RangeButtons
               activeRange={activeRange}
               setActiveRange={setActiveRange}
             />
-          }>
+          }
+        >
           <TopTracklist tracks={topTracks.items} />
         </SectionWrapper>
       )}

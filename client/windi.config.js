@@ -17,7 +17,6 @@ export default defineConfig({
         'container-gradient': "linear-gradient(90deg, rgba(0, 0, 0, 0.38) 3.07%, rgba(6, 37, 65, 0.3) 88.06%)",
         'stats-gradient': 'linear-gradient(80deg, #252728 0%, #101415 100%)',
         'navbar-bg': "linear-gradient(200deg,#38135e 14%,#141218 78%);",
-        'geometrical-texture': "url('../src/assets/bg_repeater.jpg')",
         'header-bg': "linear-gradient(45.75deg, rgb(111, 27, 168) 0%, rgb(29, 29, 30) 43.66%, rgb(48, 34, 79) 64.23%, rgba(47, 30, 64, 0.3)80.09%,rgba(96, 50, 164, 0.19) 83.76%, rgb(104, 30, 111) 100%)"
       }
     },

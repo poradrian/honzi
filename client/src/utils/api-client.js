@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //no need to write the entire spotify url
-//because the base was set globally in auth-provider (line 127)
+//because the base was set globally in auth-provider (line 120)
 function getCurrentUserProfile() {
   return axios.get('/me');
 }
@@ -29,13 +29,13 @@ function getRecentTracks(limit = 10) {
   return axios.get(`me/player/recently-played?limit=${limit}`);
 };
 
-// Get Spotify catalog information for a single album.
+// Get Spotify catalog information for a single album
 // https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-album
 function getAlbumInfo(id) {
   return axios.get(`/albums?ids=${id}`);
 }
 
-// Get audio features for multiple tracks based on their Spotify IDs.
+// Get audio features for multiple tracks based on their Spotify IDs
 // https://developer.spotify.com/documentation/web-api/reference/#/operations/get-several-audio-features
 function getAudioFeatures(ids) {
   return axios.get(`/audio-features?ids=${ids}`);
