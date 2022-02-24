@@ -63,7 +63,7 @@ function App() {
 
 ```
 
-The styling was done with the help of Windi CSS, an utility-first CSS framework, similar to Tailwind. One of the advantages of a CSS framework with predefined utility classes is that you don't have to waste time and energy to come up with names for the classes. On the other hand, I had to rely on vanilla CSS to add styling in some places.
+The styling was done with the help of Windi CSS, an utility-first CSS framework, similar to Tailwind. One of the advantages of a CSS framework with predefined utility classes is that you don't have to come up with names for the classes, and using media queries is easier. On the other hand, I had to rely on vanilla CSS to add some custom styling in a few places.
 
 
-landing page profile photo source: <https://unsplash.com/photos/wKAOlN4A644>
+source for the landing page picture: <https://unsplash.com/photos/wKAOlN4A644>
