@@ -1,10 +1,10 @@
 # About
 
 This web app displays some of your Spotify stats such as top artist/tracks, the latest played tracks and audio features (acoustincness, danceability, liveness etc) by fetching data from the Spotify Web API.
-As a junior, throughout this project I gained a better understanding about building and deploying a full-stack web app.
+Throughout this project I gained a better understanding about building and deploying a full-stack web app.
 
 ## Code Style
-I used the automatic code-formatter [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/docs/user-guide/getting-started), a static code analysis tool for identifying problematic patterns found in ECMAScript code. Shortly put, ESLint is more concerned about what the code does and Prettier about what the code looks. These tools allow the developer to waste less time and energy on things like "*what is the spacing or is there a need for a comma or semicolon in a particular place, is a variable well named? are you using good accesibility practices*", which can help with writing better code faster by taking care of some issues automatically. 
+I used the automatic code-formatter [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/docs/user-guide/getting-started), a static code analysis tool for identifying problematic patterns found in ECMAScript code. Shortly put, ESLint is more concerned about what the code does and Prettier about how the code looks like. These tools allow the developer to waste less time and energy on things like "*what is the spacing or is there a need for a comma or semicolon in a particular place, is a variable well named? are you using good accesibility practices*", which can help with writing better code faster by taking care of some issues automatically. 
 Both tools offer customization but I used the default config because I don't have strong opinions on this matter and I prefer letting the recommended automatization take care of it.
 
 There can be an overlap between the two tools because ESLint can worry (not as good as Prettier) by itself about how the code looks but you can set them up so they can work together in a good way.
