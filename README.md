@@ -4,7 +4,7 @@ This web app displays some of your Spotify stats such as top artist/tracks, the 
 
 ## Lessons learned
 
-While working on this project I gained a better understanding about building and deploying a full-stack web app. The most important lessons learned involved my newfound understanding of OAuth authorization, React hooks, API integration and Git management.
+While working on this project I gained a better understanding about building and deploying a full-stack web app. The most important lessons learned involved code structure and organization, and my newfound understanding of OAuth authorization, React hooks, API integration and Git management.
 
 
 ## Back-end
