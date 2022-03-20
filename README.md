@@ -1,7 +1,10 @@
 # About
 
 This web app displays some of your Spotify stats such as top artist/tracks, the latest played tracks and audio features (acoustincness, danceability, liveness etc) by fetching data from the Spotify Web API.
-Throughout this project I gained a better understanding about building and deploying a full-stack web app.
+
+## Lessons learned
+
+While working on this project I gained a better understanding about building and deploying a full-stack web app. The most important lessons learned involved my newfound understanding of OAuth authorization, React hooks, API integration and Git management.
 
 
 ## Back-end
