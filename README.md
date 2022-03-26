@@ -4,7 +4,7 @@ This web app displays some of your Spotify stats such as top artist/tracks, the 
 
 ## Lessons learned
 
-While working on this project I gained a better understanding about building and deploying a full-stack web app. The most important lessons learned involved code structure and organization, and my newfound understanding of OAuth authorization, React hooks, API integration and Git management.
+While working on this project I gained a better understanding about building and deploying a full-stack web app. The most important lessons learned involved code structure and organization, and my newfound understanding of the OAuth authorization flow, React hooks, API integration and Git management.
 
 
 ## Back-end
@@ -13,7 +13,7 @@ Tools: NodeJS, Express, Heroku.
 
 The topics explored on the server-side were: **REST APIs**, **HTTP requests**, and the implementation of the authorization protocol **OAuth**, to allow users to log in with their Spotify account.
 
-The server in NodeJS was created using the Express framework, instead of the native `http` module that ships with NodeJS. Using Express made some parts easier to implement (such as routes) and another good part is that it also has a healthy community with plenty resources to help building out API's. The `POST` request was set up using the **axios** library because it provides an easier API compared to Node's native module. 
+The server in NodeJS was created using the Express framework, instead of the native `http` module that ships with NodeJS. Using Express made some parts easier to implement (such as routes) and another good thing about express is that it has a healthy community with plenty resources to help building out API's. 
 
 <img src="https://developer.spotify.com/assets/AuthG_ClientCredentials.png" width="500" height="432">
 
