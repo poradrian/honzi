@@ -1,13 +1,11 @@
 # About
 
 This web app displays some of your Spotify stats such as top artist/tracks, the latest played tracks and audio features (acoustincness, danceability, liveness etc) by fetching data from the Spotify Web API.
-As a junior, throughout this project I gained a better understanding about building and deploying a full-stack web app.
 
-## Code Style
-I used the automatic code-formatter [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/docs/user-guide/getting-started), a static code analysis tool for identifying problematic patterns found in ECMAScript code. Shortly put, ESLint is more concerned about what the code does and Prettier about what the code looks. These tools allow the developer to waste less time and energy on things like "*what is the spacing or is there a need for a comma or semicolon in a particular place, is a variable well named? are you using good accesibility practices*", which can help with writing better code faster by taking care of some issues automatically. 
-Both tools offer customization but I used the default config because I don't have strong opinions on this matter and I prefer letting the recommended automatization take care of it.
+## Lessons learned
 
-There can be an overlap between the two tools because ESLint can worry (not as good as Prettier) by itself about how the code looks but you can set them up so they can work together in a good way.
+While working on this project I gained a better understanding about building and deploying a full-stack web app. The most important lessons learned involved code structure and organization, and my newfound understanding of the OAuth authorization flow, React hooks, API integration and Git management.
+
 
 ## Back-end
 
@@ -15,7 +13,7 @@ Tools: NodeJS, Express, Heroku.
 
 The topics explored on the server-side were: **REST APIs**, **HTTP requests**, and the implementation of the authorization protocol **OAuth**, to allow users to log in with their Spotify account.
 
-The server in NodeJS was created using the Express framework, instead of the native `http` module that ships with NodeJS. Using Express made some parts easier to implement (such as routes) and another good part is that it also has a healthy community with plenty resources to help building out API's. The `POST` request was set up using the **axios** library because it provides an easier API compared to Node's native module. 
+The server in NodeJS was created using the Express framework, instead of the native `http` module that ships with NodeJS. Using Express made some parts easier to implement (such as routes) and another good thing about express is that it has a healthy community with plenty resources to help building out API's. 
 
 <img src="https://developer.spotify.com/assets/AuthG_ClientCredentials.png" width="500" height="432">
 
@@ -25,7 +23,7 @@ Before implementing the OAuth flow, it was necessary to integrate the app and ma
 
 ## Front-end
 
-Tools: React(v17), [React Router(v6)](https://reactrouter.com/), [Windi CSS](https://github.com/windicss/windicss)
+Tools: React (with hooks), [React Router(v6)](https://reactrouter.com/), [Windi CSS](https://github.com/windicss/windicss)
 
 The build tool for setting up the development environment for React was [ViteJS](https://vitejs.dev/), which provides fast development experience for modern web projects by using a dev server with Hot Module Replacement (HMR) over the native ES module.
 
@@ -63,7 +61,13 @@ function App() {
 
 ```
 
-The styling was done with the help of Windi CSS, an utility-first CSS framework, similar to Tailwind. One of the advantages of a CSS framework with predefined utility classes is that you don't have to waste time and energy to come up with names for the classes. On the other hand, I had to rely on vanilla CSS to add styling in some places.
+The styling was done with the help of Windi CSS, an utility-first CSS framework, similar to Tailwind. One of the advantages of a CSS framework with predefined utility classes is that you don't have to come up with names for the classes, and using media queries is easier. On the other hand, I had to rely on vanilla CSS to add some custom styling in a few places.
+
+## Code Style
+I used the automatic code-formatter [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/docs/user-guide/getting-started), a static code analysis tool for identifying problematic patterns found in ECMAScript code. Shortly put, ESLint is more concerned about what the code does and Prettier about how the code looks like. These tools allow the developer to focus less on things like "*what is the spacing or is there a need for a comma or semicolon in a particular place, is a variable well named? are you using good accesibility practices*", which can help with writing better code faster by taking care of some issues automatically. 
+Both tools offer customization but I used the default config because I don't have strong opinions on this matter and I prefer letting the recommended automatization take care of it.
+
+There can be an overlap between the two tools because ESLint can worry (not as good as Prettier) by itself about how the code looks but you can set them up so they can work together in a good way.
 
 
-landing page profile photo source: <https://unsplash.com/photos/wKAOlN4A644>
+source for the landing page picture: <https://unsplash.com/photos/wKAOlN4A644>
