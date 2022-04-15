@@ -43,7 +43,7 @@ function hasTokenExpired() {
 /**
  * Use the refresh token in localStorage to hit the /refresh_token endpoint
  * in our Node app, then update values in localStorage with data from response.
- * @returns {void}
+ * 
  */
 async function refreshToken() {
   try {

@@ -3,14 +3,24 @@ import dotenv from "dotenv";
 import axios from "axios";
 import randomstring from 'randomstring';
 import path from 'path';
+import bp from 'body-parser';
+import morgan from 'morgan';
 
 dotenv.config();
 const app = express();
 
+//middleware that parses incoming requests
+//parse if data is passed on a querystring
+app.use(bp.urlencoded({ extended: true }));
+//parse the json body of a post request
+app.use(bp.json());
+//middleware for logging incoming requests
+app.use(morgan('dev'));
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const REDIRECT_URI = process.env.REDIRECT_URI; //route where the user is redirected after they authorized the app
+//route where the user is redirected after they authorized the app
+const REDIRECT_URI = process.env.REDIRECT_URI;
 const FE_URI = process.env.FE_URI;
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const PORT = process.env.PORT || 8888;
@@ -20,11 +30,11 @@ const __dirname = path.resolve(path.dirname(decodeURI(new URL(import.meta.url).p
 app.use(express.static(path.resolve(__dirname, './client/dist')));
 
 
-
 //1. request authorization code from spotify
-app.get('/login', (req, res) => {
+app.get('/login', function (req, res) {
   const state = randomstring.generate(16);
-  res.cookie('spotify_auth_state', state); //setting cookie
+  //setting cookie
+  res.cookie('spotify_auth_state', state);
 
   // narrow down the permissions for the client
   //https://developer.spotify.com/documentation/general/guides/authorization/scopes/
@@ -50,8 +60,7 @@ app.get('/login', (req, res) => {
 
 //2. request access+refresh token by making POST req to spotify, using the authorization code recieved above
 app.get('/callback', function (req, res) {
-  //stores the value of the authorization
-  //that's on the queryParam
+  //stores the value of the authorization that's on the queryParam
   const code = req.query.code || null;
 
   axios({
@@ -113,7 +122,7 @@ app.get('/refresh_token', (req, res) => {
     });
 });
 
-// catch all requests for the express routes. if express doesnt recognize a route, it will defer to reactapp
+// catch all requests for the express routes. if express doesnt recognize a route, it will defer to vite app
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'));
 });
@@ -121,3 +130,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`listening at http://localhost:${PORT}`);
 });
+
+
