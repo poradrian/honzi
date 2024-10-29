@@ -1,3 +1,5 @@
+UPDATE: Heroku no longer provides free hosting, thus the website is down indefinitely
+
 # About
 
 This web app displays some of your Spotify stats such as top artist/tracks, the latest played tracks and audio features (acoustincness, danceability, liveness etc) by fetching data from the Spotify Web API.
